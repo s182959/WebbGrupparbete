@@ -1,0 +1,166 @@
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.wrapper {
+    display: grid;
+    grid-gap:1em;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas: "mainHeader mainHeader mainHeader mainHeader mainHeader"
+                         "aside slider slider slider slider"
+                         "aside area1 area1 area2 area2"
+                         "aside area1 area1 area2 area2"
+                         "aside area1 area1 area2 area2"
+                         "aside area1 area1 area2 area2" ;
+    grid-template-rows: minmax(100px, auto);
+    margin:auto;
+    /* max-width: 1200px; */
+    float:left;
+}
+
+.nested {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /*repeat(3, 1fr); */
+    margin:1em;
+}
+
+.box {
+    background-color: lightslategrey;
+    border-radius: 4px;
+    padding:1vw;
+}
+
+.nestedbox {
+    background-color: white;
+    padding:0em;
+    margin:1em;
+}
+
+#mainHeader {
+
+    grid-area: mainHeader;
+}
+
+#mainHeader > h1 {
+    text-align: center;
+    font-size: 6vw;
+}
+
+#slider {
+    grid-area:slider;
+}
+
+#artikelV {
+    grid-area: area1;
+}
+
+#artikelH {
+    grid-area: area2;
+}
+
+#sidebar {
+    grid-area: aside;
+}
+
+figure {
+    margin:0px;
+    padding:0px;
+}
+
+
+#logga {
+    max-width: 40%;
+    min-width: 70px;
+    max-height: auto;
+    /* margin-left: 0px; */
+    /* float: left; */
+    padding:0.5em;
+}
+
+#toppNav {
+    text-align: center;
+    margin:auto;
+}
+
+.sokfalt {
+    padding:auto;
+ 
+}
+
+ul li {
+    display:inline;
+    font-size: 2vw;
+    /* padding:auto;
+    margin:auto; */
+ 
+}
+
+ul {
+    /* padding-left: 0px;
+    margin:auto; 
+    padding-top:5px; */
+    padding:5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color:white;
+    background-color: darkgrey;
+    padding: 10px;
+}
+
+a:visited {
+    color: white;
+}
+
+a:hover {
+    background-color: grey;
+    transition-duration: 0.5s;
+    text-decoration: underline;
+}
+
+a:active {
+    color: white;
+    background-color: rgb(37, 37, 37);
+}
+
+
+
+@media (max-width: 600px) {
+    .wrapper  {
+        display: grid;
+        grid-template-columns: auto;
+      grid-template-areas: 
+        "mainHeader" 
+        "slider" 
+        "aside" 
+        "area1"
+        "area2"
+    }
+    .nested {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+    #logga {
+        max-width: 20%;
+        min-width: 60px;
+    }
+
+    #toppNav {
+
+        margin-left: 16px;
+    }
+
+    ul li {
+        display:inline;
+        font-size: 12px;
+        /* padding:auto;
+        margin:auto; */
+     
+    }
+   
+}
