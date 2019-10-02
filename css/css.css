@@ -1,10 +1,10 @@
-h1,h2,h3,h4,h5,h6 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+
+
+
 
 .wrapper {
     display: grid;
-    grid-gap:1em;
+    grid-gap:0.2em;
     grid-template-columns: repeat(5,1fr);
     grid-template-areas: "mainHeader mainHeader mainHeader mainHeader mainHeader"
                          "aside slider slider slider slider"
@@ -16,7 +16,14 @@ h1,h2,h3,h4,h5,h6 {
     margin:auto;
     /* max-width: 1200px; */
     float:left;
+    
 }
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
 
 .nested {
     display: grid;
@@ -31,19 +38,29 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .nestedbox {
-    background-color: white;
+    /* background-color: white; */
     padding:0em;
     margin:1em;
+}
+
+.artikelbild {
+    max-width: 100%;
 }
 
 #mainHeader {
 
     grid-area: mainHeader;
+    
 }
 
 #mainHeader > h1 {
     text-align: center;
     font-size: 6vw;
+    padding:0px;
+    margin:0px;
+    border-bottom: 2px solid black;
+    background-color: rgb(121, 99, 99);
+
 }
 
 #slider {
@@ -84,49 +101,60 @@ figure {
 
 .sokfalt {
     padding:auto;
+    margin-top:auto
  
 }
 
-ul li {
+p, figcaption {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+figcaption {
+    font-style: italic;
+}
+
+nav ul li {
     display:inline;
     font-size: 2vw;
     /* padding:auto;
     margin:auto; */
- 
+
 }
 
 ul {
-    /* padding-left: 0px;
     margin:auto; 
-    padding-top:5px; */
-    padding:5px;
-}
+    padding:0px; 
+} 
 
 a {
     text-decoration: none;
 }
 
-a:link {
+nav a:link {
     color:white;
     background-color: darkgrey;
     padding: 10px;
+    
 }
 
-a:visited {
+nav a:visited {
     color: white;
 }
 
-a:hover {
+nav a:hover {
     background-color: grey;
     transition-duration: 0.5s;
     text-decoration: underline;
 }
 
-a:active {
+nav a:active {
     color: white;
     background-color: rgb(37, 37, 37);
 }
 
+.sidolankar{
+    list-style: none;
+}
 
 
 @media (max-width: 600px) {
@@ -134,33 +162,87 @@ a:active {
         display: grid;
         grid-template-columns: auto;
       grid-template-areas: 
-        "mainHeader" 
-        "slider" 
+        "mainHeader"
         "aside" 
+        "slider"  
         "area1"
         "area2"
     }
+
+    nav a {
+        font-size:2em;
+    }
     .nested {
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 1fr 4fr;
+        grid-template-areas: "logga nav"
+                            "logga sok"
+    }
+    .nestedbox {
+        margin:0px;
+        padding:0px;
     }
 
-    #logga {
-        max-width: 20%;
-        min-width: 60px;
+    #nestedlogga.nestedbox {
+        padding:0px;
+        margin:0px;
+        /* margin-top: 20px; */
+        grid-area: logga;
+        
     }
 
     #toppNav {
-
-        margin-left: 16px;
+        grid-area: nav;
+        margin:0px; 
     }
 
-    ul li {
-        display:inline;
-        font-size: 12px;
-        /* padding:auto;
-        margin:auto; */
-     
+    #toppNav ul {
+        float:right;
+        padding-top:8px;
+    }
+    
+
+    #logga {
+        max-width: 20%;
+        min-width: 80px;
+        padding:0px;
+        margin:0px;
     }
    
+
+    ul li {
+        display:inline;     
+    }
+
+    .sidolista {
+        padding:0px;
+        margin:auto;    
+        /* float:left; */
+        border: 1px solid red;
+        border-radius: 4px;
+    }
+
+  
+    
+    .sidolista a {
+        font-size:4vw;
+        text-transform: uppercase;
+        padding-left: 15px; /*stämmer ej, vill centrera!*/
+        
+    }
+
+    .sokfalt {
+        /* padding:auto;
+        margin-top:5px;
+        margin-left:26px; */
+        float:right;
+        margin-top: 15px;
+    }
+
+    #sokbox {
+        padding:auto;
+    } 
+
+
 }
+   
