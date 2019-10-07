@@ -316,9 +316,9 @@ nav a:hover {
     text-decoration: underline;
 }
 
-nav:active {
-    color: white;
-    background-color: rgb(37, 37, 37);
+nav a:active {
+    
+    background-color:red;
 }
 
 .sidolankar{
@@ -339,6 +339,10 @@ nav:active {
     transition-duration: 0.5s;
     text-decoration: underline;
     
+}
+
+.sidolankar:active {
+    background-color: red;
 }
 
 /* .sidolista  {
