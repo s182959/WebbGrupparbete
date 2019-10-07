@@ -1,272 +1,17 @@
- body {
+/* Generella regler */
+
+body {
     background: #73889c;
     
 }  
-
-.wrapper {
-    display: grid;
-    grid-gap:0.2em;
-    grid-template-columns: repeat(5,1fr);
-    grid-template-areas: "mainHeader mainHeader mainHeader mainHeader mainHeader"
-                         "aside slider slider slider slider"
-                         "aside area1 area1 area2 area2"
-                         "aside area1 area1 area2 area2"
-                         "aside area1 area1 area2 area2"
-                         "aside area1 area1 area2 area2"
-                         "footer footer footer footer footer" ;
-    grid-template-rows: minmax(100px, auto);
-    margin:auto;
-    max-width: 1200px;     
-    padding:4px;    
-}
 
 h1,h2,h3,h4,h5,h6 {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.nested {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /*repeat(3, 1fr); */
-    margin:1em;
-}
-
-.box {
-    border-radius: 4px;
-    padding:6px;
-    background-color: #385672;
-}
-
-.nestedbox {
-    /* background-color: white; */
-    padding:0em;
-    margin:1em;
-}
-
-
-
-.artikelrubrik {
-    text-shadow: 2px 2px #385672;
-    background-color:#567238;
-    border-radius: 4px;
-    margin-bottom:5px;
-    margin-top:0px;
-    padding:5px;
-}
-
-#mainHeader {
-
-    grid-area: mainHeader;
-    color:#0B1217;  
-}
-
-#mainHeader > h1 {
-    text-align: center;
-    font-size: 5vw;
-    padding:2px 10px;
-    margin:0px;
-    border-bottom: 2px solid black;
-    background-color:#567238;
-    border-radius: 4px;
-    text-shadow: 2px 2px #385672;
-}
-
-#mainHeader p {
-    text-align: right;
-    font-style: italic;
-    font-weight: 500;
-}
-
-.navigering {
-    padding:0px;
-    margin:0px;
-}
-
-#sokbox {
-    font-size:12px;
-} 
-
-#lanklista {
-    background-color: #567238;
-    margin:0px;
-    padding:5px;
-    border-radius: 4px;
-}
-
-
-#slider {
-    grid-area:slider;
-   
-}
-
-#sliderRubrik {
-    background-color: #567238;
-    border-radius: 4px;
-    color: #0B1217;
-    text-shadow: 2px 2px #385672;
-    margin:0px;
-    margin-bottom: 8px;
-}
-
-#sidfot {
-    grid-area: footer;
-}
-
-#slider h2 {
-    text-align: center;
-}
-
-* {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 600px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-}
-
-.slideBilder, .artikelbild {
-    width:100%;
-    border-radius: 4px;
-    
-}
-
-.knappar {
-    text-align: center;
-}
-
-
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-
-.prev:hover, .next:hover {
-  background-color: #567238;
-}
-
-
-.text {
-  color: #f2f2f2;
-  background-color: #567238;
-  /* border-radius: 4px; */
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-
-.fade {
-
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
-
-#slide1 {
-    display:block;
-}
-
-#artikelV {
-    grid-area: area1;
-}
-
-#artikelH {
-    grid-area: area2;
-}
-
-#sidebar {
-    grid-area: aside;
-    
-}
-
 figure {
     margin:0px;
     padding:0px;
-}
-
-
-#logga {
-    max-width: 60%;
-    min-width: 140px;
-    /* margin-left: 0px; */
-    
-    padding:0.5em;
-    margin-left:0px;
-
-}
-
-#toppNav {
-    text-align: center;
-    margin:auto;
-    margin-bottom: 24px;
-    
-}
-
-
-.sokfalt {
-    margin-top:auto;
-    float:right;
-    margin-right:0px;
- 
 }
 
 p, figcaption {
@@ -279,16 +24,13 @@ figcaption {
 
 nav ul li {
     display:inline;
-    font-size: 1.8vw;
-    /* padding:auto;
-    margin:auto; */
-    
+    font-size: 1.8vw; 
 }
 
 ul {
     margin:auto; 
     padding:0px; 
-} 
+}  
 
 a {
     text-decoration: none;
@@ -318,14 +60,275 @@ nav a:active {
     background-color:red;
 }
 
-.sidolankar{
+/* --------------------------------------------------------------------------------- */
+/* Huvudgrid */
+
+.wrapper {
+    display: grid;
+    grid-gap:0.2em;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-areas: "mainHeader mainHeader mainHeader mainHeader mainHeader"
+                         "aside slider slider slider slider"
+                         "aside area1 area1 area2 area2"
+                         "aside area1 area1 area2 area2"
+                         "aside area1 area1 area2 area2"
+                         "aside area1 area1 area2 area2"
+                         "footer footer footer footer footer" ;
+    grid-template-rows: minmax(100px, auto);
+    margin:auto;
+    max-width: 1200px;     
+    padding:4px;    
+}
+
+.box {
+    border-radius: 4px;
+    padding:6px;
+    background-color: #385672;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Header */
+
+#mainHeader {
+    grid-area: mainHeader;
+    color:#0B1217;
+    background: linear-gradient(#1c2b39,#385672);  
+}
+
+#mainHeader > h1 {
+    text-align: center;
+    font-size: 5vw;
+    padding:2px 10px;
+    margin:0px;
+    border-bottom: 2px solid black;
+    background-color:#567238;
+    border-radius: 4px;
+    text-shadow: 2px 2px #385672;
+}
+
+#mainHeader p {
+    text-align: right;
+    font-style: italic;
+    font-weight: 500;
+}
+
+/* Logga */
+
+#logga {
+    max-width: 60%;
+    min-width: 140px;
+    /* margin-left: 0px; */
     
+    padding:0.5em;
+    margin-left:0px;
+
+}
+
+/* Navigering, top */
+
+.navigering {
+    padding:0px;
+    margin:0px;
+}
+
+/* Sökfält */
+
+
+#sokbox {
+    padding: 0px;
+    font-size:12px;
+} 
+
+#toppNav {
+    text-align: center;
+    margin:auto;
+    margin-bottom: 24px;
+    
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Slider */
+
+#slider {
+    grid-area:slider;
+   
+}
+
+#slide1 {
+    display:block;
+}
+
+#sliderRubrik {
+    background-color: #567238;
+    border-radius: 4px;
+    color: #0B1217;
+    text-shadow: 2px 2px #385672;
+    margin:0px;
+    margin-bottom: 8px;
+}
+
+#slider h2 {
+    text-align: center;
+}
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.slideBilder, .artikelbild {
+    width:100%;
+    border-radius: 4px;   
+}
+
+.knappar {
+    text-align: center;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: #567238;
+}
+
+.text {
+  color: #f2f2f2;
+  background-color: #567238;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
+
+/* --------------------------------------------------------------------------------- */
+/* Nestlad grid i header */
+
+.nested {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /*repeat(3, 1fr); */
+    margin:1em;
+}
+.nestedbox {
+    /* background-color: white; */
+    padding:0em;
+    margin:1em;
+}
+
+#slogan{
+    color:white;
+    opacity: 0.5;
+    text-shadow: #567238 5px 5px 5px;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Sidfot */
+
+#sidfot {
+    grid-area: footer;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Artiklar */
+
+#artikelV {
+    grid-area: area1;
+}
+
+#artikelH {
+    grid-area: area2;
+}
+
+
+.artikelrubrik {
+    text-shadow: 2px 2px #385672;
+    background-color:#567238;
+    border-radius: 4px;
+    margin-bottom:5px;
+    margin-top:0px;
+    padding:5px;
+}
+
+/* --------------------------------------------------------------------------------- */
+/* Sidonavigering */
+
+#sidebar {
+    grid-area: aside;
+    position: relative;    
+}
+
+
+.sidolankar {    
     list-style: none;
     padding:5px;
     background-color:#567238;
     margin:0px;
     margin-bottom: 5px;
     border-radius: 4px;
+    
 }
 
 .sidolankar a {
@@ -335,8 +338,7 @@ nav a:active {
 .sidolankar:hover {
     background-color: #1f2f3f;
     transition-duration: 0.5s;
-    text-decoration: underline;
-    
+    text-decoration: underline;   
 }
 
 .sidolankar:active {
@@ -345,28 +347,65 @@ nav a:active {
 
 .sidolista  {
     padding-top:0px;
-    margin-top:0px; 
-    
-       
+    margin-top:0px;      
 }  
 
+.annons {
+text-align: center;    
+} 
 
-
-
-
-/* .sidolista a:link {
-    color:white;
-    background-color: #567238;
-    padding: 5px;
-    border-radius: 4px;
-    margin:5px;
+.annons img {
+    padding-top:30px;
 }
 
-.sidolista a:hover {
-    background-color: #1f2f3f;
-    transition-duration: 0.5s;
-    text-decoration: underline;
-} */
+#copy {
+    position:absolute;
+    bottom: 0;
+    color:white;
+    font-size: 10px;
+}
+
+/* --------------------------------------------------------------------------------- */
+
+
+
+
+
+.sokfalt {
+    margin-top:auto;
+    float:right;
+    margin-right:0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media queries */
+
+
+/* Breakpoint för större skärmar  */
 
 @media (min-width: 2000px) {
     #mainHeader > h1 {
@@ -376,16 +415,17 @@ nav a:active {
     nav ul li {
  
         font-size: 1.8em;
-
-        
     }
 }
+
+/* --------------------------------------------------------------------------------- */
+/* Breakpoint för mobilskärmar steg1 */
 
 @media (max-width: 600px) {
     .wrapper  {
         display: grid;
         grid-template-columns: auto;
-      grid-template-areas: 
+        grid-template-areas: 
         "mainHeader"
         "aside" 
         "slider"  
@@ -394,15 +434,38 @@ nav a:active {
         "footer"
     }
 
-    nav a {
-        font-size:2em;
-    }
     .nested {
         display: grid;
         grid-template-columns: 1fr 4fr;
         grid-template-areas: "logga nav"
-                            "logga sok"
+                             "logga sok"
     }
+
+/* Generellt */
+
+    nav a {
+        font-size:2em;
+    }
+
+    ul li {
+        display:inline;     
+    }
+
+/* --------------------------------------------------------------------------------- */
+    .skyscraper {
+        display: none;
+    }
+
+    .annons {
+       display: none
+    }
+    
+
+
+    #copy {
+       display: none;
+    }
+
     .nestedbox {
         margin:0px;
         padding:0px;
@@ -411,9 +474,7 @@ nav a:active {
     #nestedlogga.nestedbox {
         padding:0px;
         margin:0px;
-        /* margin-top: 20px; */
-        grid-area: logga;
-        
+        grid-area: logga;       
     }
 
     #lanklista {
@@ -430,26 +491,20 @@ nav a:active {
         padding-top:8px;
     }
 
-    
-
     #logga {
         max-width: 20%;
         min-width: 80px;
         padding:0px;
         margin:0px;
     }
-   
 
-    ul li {
-        display:inline;     
-    }
+/* --------------------------------------------------------------------------------- */    
+/* Sidolista */
 
     .sidolista {
         padding:5px;
-  
-        /* float:left; */
-       text-align: center;
-    border-radius: 4px;
+        text-align: center;
+        border-radius: 4px;
         
     }
 
@@ -457,45 +512,44 @@ nav a:active {
         font-size:12px;
         text-transform: uppercase;
         padding:0px; 
-        margin:0px;
-        
-        
+        margin:0px;  
     }
 
     .sokfalt {
         float:right;
         margin-top: 15px;
     }
-
-
 }
-   
+/* --------------------------------------------------------------------------------- */  
+
+
+
+
+
+
+
+
+
+/* Breakpoint för mobiltelefoner steg2 */
+
 @media (max-width: 420px) {
 
     .sidolista {
         padding:5px;    
-        /* float:left; */
-       text-align: center;
-    border-radius: 4px;
+        text-align: center;
+        border-radius: 4px;
     }
         
     .sidolista a {
         font-size:8px;
         text-transform: uppercase;
         padding:0px; 
-        margin:0px;
-
-    
-        
-        
+        margin:0px;   
     }
 
     nav ul li {
         display:inline;
-        font-size: 1.2vw;
-        /* padding:auto;
-        margin:auto; */
-        
+        font-size: 1.2vw; 
     }
-
 }
+/* --------------------------------------------------------------------------------- */

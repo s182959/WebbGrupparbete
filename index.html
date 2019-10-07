@@ -9,42 +9,42 @@
     <link rel="stylesheet" href="css/css.css">
     <!-- <link rel="javascript" href="js/slider.js"> -->
     <script>
-            var slideIndex = 1;
-                showSlides(slideIndex);
-        
-                function plusSlides(n) {
-                    showSlides(slideIndex += n);
-                }
-        
-                function currentSlide(n) {
-                    showSlides(slideIndex = n);
-                }
-        
-                function showSlides(n) {
-                    var i;
-                    var slides = document.getElementsByClassName("mySlides");
-                    var dots = document.getElementsByClassName("dot");
-                    if (n > slides.length) { slideIndex = 1 }
-                    if (n < 1) { slideIndex = slides.length }
-                    for (i = 0; i < slides.length; i++) {
-                        slides[i].style.display = "none";
-                    }
-                    for (i = 0; i < dots.length; i++) {
-                        dots[i].className = dots[i].className.replace(" active", "");
-                    }
-                    slides[slideIndex - 1].style.display = "block";
-                    dots[slideIndex - 1].className += " active";
-                }
-        </script>
-</head>
-<body>
-<div class="wrapper">
+        var slideIndex = 1;
+        showSlides(slideIndex);
 
-   
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+
         <header class="box header" id="mainHeader">
 
             <h1 class="h1">Kattpsykologen</h1>
-            <p class="nestedbox">-Facktidningen för dig som arbetar med katters mentala hälsa</p>
+            <p class="nestedbox" id="slogan">-Facktidningen för dig som arbetar med katters mentala hälsa</p>
             <div class="nested">
                 <figure class="nestedbox" id="nestedlogga">
                     <a href="index.html"><img id="logga" src="bilder/Cat/kplogga2.png" alt="logotyp"></a>
@@ -61,7 +61,6 @@
                 </form>
             </div>
         </header>
-
 
         <header class="box header" id="slider">
             <h2 class="h2" id="sliderRubrik">I klöset</h2>
@@ -98,8 +97,6 @@
             </div>
         </header>
 
-
-
         <article class="box artikel" id="artikelV">
             <h3 class="h3 artikelrubrik">Kattmynta, en klassfråga?</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cupiditate, possimus.</p>
@@ -122,8 +119,6 @@
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, cumque.</p>
         </article>
 
-
-
         <aside class="box aside" id="sidebar">
             <nav class="navigering"></nav>
 
@@ -135,23 +130,23 @@
                     <li class="sidolankar"><a href="#">Könsroller</a></li>
                     <li class="sidolankar"><a href="#">Diagnoser</a></li>
                     <li class="sidolankar"><a href="#">Värdegrund</a></li>
-
                 </ul>
+                <figure class="annons">
+                    <img class="skyscraper" src="bilder/Cat/nipadreal.png" alt="annonsbild">
+                </figure>
+                <p id="copy">&copy T. Hjelm 2019</p>
             </section>
         </aside>
         <footer id="sidfot">
-                <p>
-                        <a href="http://jigsaw.w3.org/css-validator/check/referer">
-                            <img style="border:0;width:88px;height:31px"
-                                src="http://jigsaw.w3.org/css-validator/images/vcss"
-                                alt="Valid CSS!" />
-                        </a>
-                    </p>
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+                        alt="Valid CSS!" />
+                </a>
+            </p>
 
         </footer>
-
-   
-</div>
+    </div>
 </body>
 
 </html>
