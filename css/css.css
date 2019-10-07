@@ -19,7 +19,7 @@
     /* max-width: 1200px; */
     float:left;
     padding:4px;
-    max-height: 100%;
+    
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -27,8 +27,6 @@ h1,h2,h3,h4,h5,h6 {
   
     
 }
-
-
 
 .nested {
     display: grid;
@@ -83,6 +81,11 @@ h1,h2,h3,h4,h5,h6 {
     text-align: right;
     font-style: italic;
     font-weight: 500;
+}
+
+.navigering {
+    padding:0px;
+    margin:0px;
 }
 
 #sokbox {
@@ -263,7 +266,10 @@ figure {
 #toppNav {
     text-align: center;
     margin:auto;
+    margin-bottom: 24px;
+    
 }
+
 
 .sokfalt {
     margin-top:auto;
